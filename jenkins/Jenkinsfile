@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir("simple-java-maven-app") {
+                   sh 'pwd'
                    sh 'mvn -B -DskipTests clean package'  
                 } 
             }
